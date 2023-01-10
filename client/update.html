@@ -10,16 +10,19 @@
 
 <body>
     <br> <br>
-    <div class="container">
+    <div id="reg">
+        <h2 id="heading">Update a Food Item</h2>
         <form ng-submit="updateEntry()">
-            <div class="mt-3">
-                <div class="row">
-                    <div class="col-md-4">
-                        <label for="id" class="form-label">Id</label>
-                        <select class="form-select form-select-lg" ng-model="fid" id="" required ng-options="data.fid for data in datas" ng-change="getId()">
+            <div class="container">
+               
+                    <div >
+                        <label for="id" >Id</label>
+                        <select ng-model="fid" id="" required ng-options="data.fid for data in datas" ng-change="getId()">
                             <option selected disabled value="">Select one</option>
                         </select>
+                 
                     </div>
+                    <br>
                     <label for="fn"> Dish Name: </label>   
                   <input type="text" name="name" id="fn" placeholder= "Dish name"  size="15" ng-model="name"  />   
                   

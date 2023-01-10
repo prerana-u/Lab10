@@ -6,6 +6,25 @@
         .controller('MyController', function ($scope, $http) {
             $http.get('http://localhost:3000/').then(function (response) {
                 $scope.datas = response.data
+                $scope.orderByMe = function(x) {
+                    $scope.myOrderBy = x;
+                }
+            
+                  $scope.changeColorFilter = function (item){
+                   
+                     if (item.spice == 'High') {
+                       item.class = 'High';
+                   }
+                   else if (item.spice == 'Low') {
+                       item.class = 'Low';
+                   }
+                   else {
+                       item.class = 'Medium';
+                   }
+                 
+                   return true;
+                    
+                  };
             })
         })
 

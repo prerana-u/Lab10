@@ -10,9 +10,10 @@
 
 <body>
     <br> <br>
-    <div class="container">
+    <div id="reg">
+        <h2 id="heading">Add a Food Item</h2>
         <form ng-submit="createEntry()">
-            <div class="mt-3">
+            <div class="container">
                 <label>   
                     Food ID :  
                     </label>  
@@ -52,12 +53,12 @@
                     <input type="radio" value="Appetiser" name="ftype" checked ng-model="ftype"> Appetiser   
                     <input type="radio" value="Main Course" name="ftype" ng-model="ftype"> Main Course   
                     <input type="radio" value="Dessert" name="ftype" ng-model="ftype"> Dessert  
-                      
-                    </div>
                     <br> 
-            <div class="mt-5 d-flex justify-content-center">
-                <input type="submit" value="Create" class="btn btn-success">
-            </div>
+                    <div class="mt-5 d-flex justify-content-center">
+                        <input type="submit" value="Create" class="btn btn-success">
+                    </div>
+                    </div>
+       
         </form>
     </div>
 </body>
