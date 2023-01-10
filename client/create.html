@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+</head>
+
+<body>
+    <br> <br>
+    <div class="container">
+        <form ng-submit="createEntry()">
+            <div class="mt-3">
+                <label>   
+                    Food ID :  
+                    </label>  
+                    
+                    <input type="number" name="fid" id="price" placeholder="food id"  size="10" ng-model="fid" required/>   
+                    <br>
+                    <label for="fn"> Dish Name: </label>   
+                  <input type="text" name="name" id="fn" placeholder= "Dish name" onblur="validateName()" size="15" ng-model="name" required />   
+                  
+                
+                  <br> 
+                  <label>   
+                  Price :  
+                  </label>  
+                  
+                  <input type="number" name="price" id="price" placeholder="price"  size="10" ng-model="price" required/>   
+                  <br>
+                  <label>  Description :  </label>
+                  <textarea cols="20" rows="2" placeholder="Enter Description"  name="description" ng-model="description" required>  
+                  </textarea>  
+                  <div> 
+                    <br> 
+                    
+                  <label>   
+                  Spice Level :  
+                  </label>
+                  <input type="radio" value="High" name="spice" ng-model="spice" checked > High   
+                  <input type="radio" value="Medium" name="spice" ng-model="spice"> Medium   
+                  <input type="radio" value="Low" name="spice" ng-model="spice"> Low  
+                    
+                  </div> 
+                  <br>
+                 
+                    <label>   
+                    Food Type :  
+                    </label>
+                    <input type="radio" value="Appetiser" name="ftype" checked ng-model="ftype"> Appetiser   
+                    <input type="radio" value="Main Course" name="ftype" ng-model="ftype"> Main Course   
+                    <input type="radio" value="Dessert" name="ftype" ng-model="ftype"> Dessert  
+                      
+                    </div>
+                    <br> 
+            <div class="mt-5 d-flex justify-content-center">
+                <input type="submit" value="Create" class="btn btn-success">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
